@@ -222,22 +222,35 @@ With warm wishes and heartfelt affection,<br>
   <p>Manasa, may your future be filled with peaceful days, genuine affection, meaningful achievements, and beautiful surprises. May you never have to make yourself smaller to fit into someone else's world. Keep being yourself, keep dreaming, and keep finding reasons to smile.</p>
 </section>
 
+
 <section>
   <h2>Tell Me What You Think 💌</h2>
   <p>Comment your opinion about the website.</p>
-  <p class="small">Demo only: feedback is not saved or sent anywhere yet.</p>
+
   <label for="rating">Your rating</label>
-  <select id="rating">
-    <option value="5">★★★★★ — Loved it</option>
-    <option value="4">★★★★ — Beautiful</option>
-    <option value="3">★★★ — Nice</option>
-    <option value="2">★★ — Could be better</option>
-    <option value="1">★ — Needs improvement</option>
+  <select id="rating" required>
+    <option value="">Select rating</option>
+    <option value="5">⭐⭐⭐⭐⭐ - Loved it</option>
+    <option value="4">⭐⭐⭐⭐ - Beautiful</option>
+    <option value="3">⭐⭐⭐ - Nice</option>
+    <option value="2">⭐⭐ - Could be better</option>
+    <option value="1">⭐ - Needs improvement</option>
   </select>
-  <textarea id="feedback" rows="4" placeholder="Write your opinion here..."></textarea>
-  <button onclick="showFeedback()">Preview Feedback</button>
-  <p id="feedbackPreview"></p>
+
+  <textarea
+    id="feedback"
+    rows="4"
+    maxlength="1000"
+    placeholder="Write your opinion here..."
+  ></textarea>
+
+  <button id="submitFeedbackButton" type="button">
+    Submit Feedback 💌
+  </button>
+
+  <p id="feedbackStatus" role="status"></p>
 </section>
+
 
 <footer>
   Made with love, for one special soul.<br>
