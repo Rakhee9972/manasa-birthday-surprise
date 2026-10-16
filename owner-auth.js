@@ -33,6 +33,7 @@ if (loginButton) {
 
 if (dashboard) {
   dashboard.style.display = "block";
+dashboard.hidden = false;
   dashboard.scrollIntoView({ behavior: "smooth" });
         }
     } catch (error) {
