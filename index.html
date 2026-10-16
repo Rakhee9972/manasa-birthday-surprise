@@ -199,6 +199,21 @@ input {
 .countdown { color: var(--gold); font-size: 1.25rem; }
 footer { text-align: center; color: var(--gold); padding: 30px 12px; }
 .small { color: #cbb2c9; font-size: .85rem; }
+  
+/* Midnight celebration glow */
+.midnight-glow {
+  animation: midnightGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes midnightGlow {
+  from {
+    box-shadow: 0 0 15px #ff72b655;
+  }
+  to {
+    box-shadow: 0 0 35px #f5c98bbb, 0 0 55px #ff72b677;
+  }
+  }
+  
 </style>
 </head>
 <body>
