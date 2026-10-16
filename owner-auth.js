@@ -1,5 +1,9 @@
+
 import { auth } from "./firebase.js";
-import { signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+import {
+  signInWithEmailAndPassword,
+  signOut
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
 const loginButton = document.getElementById("ownerLoginButton");
 
@@ -9,14 +13,24 @@ if (loginButton) {
     const password = document.getElementById("ownerPassword").value;
     const status = document.getElementById("ownerStatus");
 
-    status.textContent = "Signing in…";
+    status.textContent = "Signing in...";
     loginButton.disabled = true;
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      status.textContent = "Login successful. Checking owner permissions…";
+      const credential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+
+      if (credential.user.email !== "rakhee201505@gmail.com") {
+        await signOut(auth);
+        throw new Error("This account is not authorized as the owner.");
+      }
+
+      status.textContent = "Owner login successful! ❤️";
     } catch (error) {
-      status.textContent = "Login failed. Please check your email and password.";
+      status.textContent = "Login failed: " + error.message;
     } finally {
       loginButton.disabled = false;
     }
