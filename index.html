@@ -345,6 +345,29 @@ footer { text-align: center; color: var(--gold); padding: 30px 12px; }
   }
   }
   
+.heart-sticker {
+  text-align: center;
+  margin: 18px auto;
+  animation: heartFloat 3s ease-in-out infinite;
+}
+
+.heart-sticker img {
+  width: 190px;
+  max-width: 70%;
+  height: auto;
+  filter: drop-shadow(0 0 14px #ff72b6)
+          drop-shadow(0 0 24px #f5c98b);
+}
+
+@keyframes heartFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.04);
+  }
+                      }
+  
 </style>
 </head>
 <body>
