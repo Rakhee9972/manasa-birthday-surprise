@@ -9,7 +9,6 @@
 :root {
   --pink: #ff72b6;
   --gold: #f5c98b;
-  --panel: #211326;
 }
 * { box-sizing: border-box; }
 body {
@@ -30,7 +29,11 @@ h2 { color: var(--pink); text-align: center; }
 h3 { color: var(--gold); }
 p { white-space: pre-line; }
 .subtitle { color: #e7bfd8; }
-.heart { color: #ff72b6; animation: beat 1.4s infinite; display: inline-block; }
+.heart {
+  color: #ff72b6;
+  animation: beat 1.4s infinite;
+  display: inline-block;
+}
 @keyframes beat { 50% { transform: scale(1.25); } }
 main { max-width: 850px; margin: auto; padding: 12px 16px 60px; }
 section {
@@ -51,15 +54,27 @@ button {
   cursor: pointer;
   margin: 6px 0;
 }
-input, textarea, select {
-  width: 100%; padding: 12px; margin: 8px 0;
-  border-radius: 10px; border: 1px solid #b85c94;
-  background: #130c1b; color: white; font-size: 1rem;
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #b85c94;
+  background: #130c1b;
+  color: white;
+  font-size: 1rem;
 }
-.card-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 12px; }
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 12px;
+}
 .love-card {
-  background: #381c37; padding: 16px; border-radius: 14px;
-  border: 1px solid #f5c98b55; text-align: center;
+  background: #381c37;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #f5c98b55;
+  text-align: center;
 }
 .poem { color: #ffe4f1; font-size: 1.05rem; }
 .letter { color: #f5dce9; }
@@ -71,6 +86,7 @@ footer { text-align: center; color: var(--gold); padding: 30px 12px; }
 </style>
 </head>
 <body>
+
 <header>
   <div class="heart">♥ ♥ ♥</div>
   <h1>For You, Manasa</h1>
@@ -84,19 +100,20 @@ footer { text-align: center; color: var(--gold); padding: 30px 12px; }
   <p>Manasa, this little surprise is made especially for you.</p>
   <p>Please try on <strong>11/11/2026 at 12:00 AM</strong>.
 There is a special surprise waiting for you that day. ❤️</p>
-  <div class="countdown" id="countdown">Counting down to your special moment...</div>
+  <div class="countdown" id="countdown">Counting down...</div>
 </section>
 
 <section id="unlock">
   <h2>Open Your Surprise 💗</h2>
   <p>Enter your name to continue.</p>
-  <input id="visitorName" placeholder="Your name">
-  <button onclick="openSurprise()">Open My Heart ❤️</button>
+  <input id="visitorName" placeholder="Your name" autocomplete="off">
+  <button type="button" onclick="openSurprise()">Open My Heart ❤️</button>
   <p id="error" role="status"></p>
-  <p class="small">This is a simple demo gate, not secure access control.</p>
+  <p class="small">Enter Rakhee for an immediate preview, or Manasa for the birthday surprise.</p>
 </section>
 
-<div id="surprise" style="display:none;">
+<div id="surprise">
+
 <section>
   <h2>Happy Birthday, Manasa! 🎂</h2>
   <p style="text-align:center">Nee roju nee navvula laage andhamga undaali. ❤️</p>
@@ -113,43 +130,43 @@ There is a special surprise waiting for you that day. ❤️</p>
 మానసా… నీ పేరు పలికితే మనసులో మల్లెలు పూస్తాయి,<br>
 నీ గురించి ఆలోచిస్తే నిశ్శబ్దంలోనూ రాగాలు వినిపిస్తాయి.<br>
 నీ నవ్వు ఉదయించే సూర్యుడి తొలి కిరణంలా,<br>
-చీకటిలో ఆశను నింపే వెన్నెల వెలుగులా.<br>
-<br>
+చీకటిలో ఆశను నింపే వెన్నెల వెలుగులా.<br><br>
+
 నీ కళ్ళలో ఏదో చెప్పని కథ కనిపిస్తుంది,<br>
 చూసిన ప్రతి క్షణం మనసు కొత్తగా స్పందిస్తుంది.<br>
 నీ చూపు తాకితే కాలమే కాసేపు ఆగినట్టుంటుంది,<br>
-నీ చిరునవ్వు చూస్తే బాధ కూడా దారి మళ్లించినట్టుంటుంది.<br>
-<br>
+నీ చిరునవ్వు చూస్తే బాధ కూడా దారి మళ్లించినట్టుంటుంది.<br><br>
+
 పూల అందం గురించి కవులు ఎన్నో మాటలు చెప్పారు,<br>
 చందమామ అందాన్ని చూసి ఎన్నో పాటలు రాశారు.<br>
 కానీ నీ అందాన్ని వర్ణించడానికి మాటలు సరిపోవు,<br>
-నీ మనసులోని మంచితనాన్ని కొలవడానికి కొలమానం దొరకదు.<br>
-<br>
+నీ మనసులోని మంచితనాన్ని కొలవడానికి కొలమానం దొరకదు.<br><br>
+
 నీ జుట్టులో గాలి ఆడే ఆ చిన్న క్షణం అందమైన దృశ్యం,<br>
 నీ ముఖంలో మెరిసే సంతోషం హృదయానికి మధురమైన కావ్యం.<br>
 నీ మాటల్లోని మాధుర్యం ఉదయపు పక్షుల గానంలా,<br>
-నీ నడకలోని హుందాతనం పూలబాటలోని పరిమళంలా.<br>
-<br>
+నీ నడకలోని హుందాతనం పూలబాటలోని పరిమళంలా.<br><br>
+
 నువ్వు నవ్వితే ప్రపంచం కొంచెం అందంగా మారినట్టు,<br>
 నువ్వు సంతోషంగా ఉంటే నా ఆలోచనలన్నీ వెలిగినట్టు.<br>
 నీ కలలన్నీ ఒక్కొక్కటిగా నిజమవ్వాలని కోరుకుంటాను,<br>
-నీ కళ్లలో కన్నీటి బదులు ఆనందమే ఉండాలని ఆశిస్తాను.<br>
-<br>
+నీ కళ్లలో కన్నీటి బదులు ఆనందమే ఉండాలని ఆశిస్తాను.<br><br>
+
 నీకు ఇష్టమైన ఉదయాలు పూల పరిమళంతో మొదలవ్వాలి,<br>
 నీ ప్రతి అడుగులో కొత్త ఆశ నీకు తోడుగా నిలవాలి.<br>
 నీ దారిలో ఎదురయ్యే కష్టాలన్నీ ధైర్యంగా దాటాలి,<br>
-నీ హృదయం కోరుకున్న సంతోషం నీ చెంతకు చేరాలి.<br>
-<br>
+నీ హృదయం కోరుకున్న సంతోషం నీ చెంతకు చేరాలి.<br><br>
+
 నీ పుట్టినరోజు ఒక తేదీ మాత్రమే కాదు,<br>
 నీ అందమైన ఉనికిని జరుపుకునే ప్రత్యేకమైన రోజు.<br>
 ఈ రోజు నీ పెదవులపై చిరునవ్వు ఎప్పటికీ నిలవాలి,<br>
-నీ మనసులోని ప్రతి చిన్న కోరికకు రెక్కలు రావాలి.<br>
-<br>
+నీ మనసులోని ప్రతి చిన్న కోరికకు రెక్కలు రావాలి.<br><br>
+
 మానసా… నువ్వు ఎప్పుడూ నీలా అందంగా ఉండాలి,<br>
 నీ మంచితనం నీ జీవితమంతా వెలుగులు నింపాలి.<br>
 నీ కలలకు ఆకాశమే హద్దుగా మారాలి,<br>
-నీ భవిష్యత్తు ప్రేమతో, ప్రశాంతతతో నిండిపోవాలి.<br>
-<br>
+నీ భవిష్యత్తు ప్రేమతో, ప్రశాంతతతో నిండిపోవాలి.<br><br>
+
 ఈ చిన్న కవిత నీ అందానికి పూర్తి వర్ణన కాదు,<br>
 నీ ప్రత్యేకతను చెప్పడానికి ఇది ఒక చిన్న ప్రయత్నం మాత్రమే.<br>
 నీ నవ్వు ఎప్పుడూ ఇలాగే మధురంగా ఉండాలి,<br>
@@ -222,41 +239,12 @@ With warm wishes and heartfelt affection,<br>
   <p>Manasa, may your future be filled with peaceful days, genuine affection, meaningful achievements, and beautiful surprises. May you never have to make yourself smaller to fit into someone else's world. Keep being yourself, keep dreaming, and keep finding reasons to smile.</p>
 </section>
 
-
-<section>
-  <h2>Tell Me What You Think 💌</h2>
-  <p>Comment your opinion about the website.</p>
-
-  <label for="rating">Your rating</label>
-  <select id="rating" required>
-    <option value="">Select rating</option>
-    <option value="5">⭐⭐⭐⭐⭐ - Loved it</option>
-    <option value="4">⭐⭐⭐⭐ - Beautiful</option>
-    <option value="3">⭐⭐⭐ - Nice</option>
-    <option value="2">⭐⭐ - Could be better</option>
-    <option value="1">⭐ - Needs improvement</option>
-  </select>
-
-  <textarea
-    id="feedback"
-    rows="4"
-    maxlength="1000"
-    placeholder="Write your opinion here..."
-  ></textarea>
-
-  <button id="submitFeedbackButton" type="button">
-    Submit Feedback 💌
-  </button>
-
-  <p id="feedbackStatus" role="status"></p>
-</section>
-
-
 <footer>
   Made with love, for one special soul.<br>
   <span class="heart">♥</span><br><br>
   <strong>It's your Nanna ❤️</strong>
 </footer>
+
 </div>
 </main>
 
@@ -265,68 +253,58 @@ const birthday = new Date("2026-11-11T00:00:00+05:30");
 const countdown = document.getElementById("countdown");
 
 function updateCountdown() {
-  const now = new Date();
-  const diff = birthday - now;
+  const diff = birthday - new Date();
+
   if (diff <= 0) {
     countdown.textContent = "Your special moment is here ❤️";
     return;
   }
+
   const days = Math.floor(diff / 86400000);
   const hours = Math.floor((diff % 86400000) / 3600000);
   const minutes = Math.floor((diff % 3600000) / 60000);
   const seconds = Math.floor((diff % 60000) / 1000);
-  countdown.textContent = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+
+  countdown.textContent =
+    `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
 }
+
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
 function openSurprise() {
   const name = document.getElementById("visitorName").value.trim().toLowerCase();
-  const now = new Date();
-  if (now < birthday) {
-    document.getElementById("error").textContent =
-      "Please come back on 11/11/2026 at 12:00 AM. ❤️";
+  const error = document.getElementById("error");
+  const surprise = document.getElementById("surprise");
+  const lockMessage = document.getElementById("lockMessage");
+  const unlock = document.getElementById("unlock");
+
+  if (name === "rakhee") {
+    surprise.style.display = "block";
+    lockMessage.style.display = "none";
+    unlock.style.display = "none";
+    surprise.scrollIntoView({ behavior: "smooth" });
     return;
   }
-  if (name !== "manasa") {
-    document.getElementById("error").textContent =
-      "Please enter the name Manasa. 💗";
+
+  if (name === "manasa") {
+    if (new Date() < birthday) {
+      error.textContent =
+        "Please try on 11/11/2026 at 12:00 AM. ❤️ A special surprise is waiting for you!";
+      return;
+    }
+
+    surprise.style.display = "block";
+    lockMessage.style.display = "none";
+    unlock.style.display = "none";
+    surprise.scrollIntoView({ behavior: "smooth" });
     return;
   }
-  document.getElementById("surprise").style.display = "block";
-  document.getElementById("lockMessage").style.display = "none";
-  document.getElementById("unlock").style.display = "none";
-  document.getElementById("surprise").scrollIntoView({behavior:"smooth"});
+
+  error.textContent = "Please enter Rakhee or Manasa. 💗";
 }
-
-
 </script>
-  <section id="ownerLogin" style="margin:22px 0;padding:22px;background:#211326;border:1px solid #b85c944d;border-radius:20px;">
-  <h2>Owner Login 🔐</h2>
-  <p>Only the website owner can access this area.</p>
-  <input id="ownerEmail" type="email" placeholder="Owner email" autocomplete="username" style="width:100%;padding:12px;margin:8px 0;">
-  <input id="ownerPassword" type="password" placeholder="Password" autocomplete="current-password" style="width:100%;padding:12px;margin:8px 0;">
-  <button id="ownerLoginButton" type="button">Login</button>
-  <p id="ownerStatus" role="status"></p>
 
-<section id="ownerDashboard"
-  hidden
-  style="display:none; margin:22px 0; padding:22px; border:1px solid #d66aa5; border-radius:18px;">
-
-  <h2>Owner Dashboard 💗</h2>
-  <p>Welcome, Owner! ❤️</p>
-
-  <h3>Website Feedback</h3>
-  <div id="feedbackList">
-    Login to view feedback.
-  </div>
-
-  <button id="ownerLogoutButton" type="button">
-    Logout
-  </button>
-</section>
-    
-<script type="module" src="./owner-auth.js"></script>
 </body>
-  </html>
-                                                                                                   
+    </html>
+  
