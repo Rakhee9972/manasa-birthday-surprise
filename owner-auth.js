@@ -106,7 +106,29 @@ if (loginButton) {
       }
 
       showDashboard(true);
-      await loadFeedback();
+
+// Show all birthday messages for the owner
+const surprise = document.getElementById("surprise");
+const lockMessage = document.getElementById("lockMessage");
+const unlock = document.getElementById("unlock");
+
+if (surprise) {
+  surprise.style.display = "block";
+}
+
+if (lockMessage) {
+  lockMessage.style.display = "none";
+}
+
+if (unlock) {
+  unlock.style.display = "none";
+}
+
+if (ownerStatus) {
+  ownerStatus.textContent = "Owner login successful! ❤️ All messages are visible.";
+}
+
+await loadFeedback();
     } catch (error) {
       if (ownerStatus) {
         ownerStatus.textContent = "Login failed: " + error.message;
