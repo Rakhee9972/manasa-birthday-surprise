@@ -30,6 +30,68 @@ h3 { color: var(--gold); }
 p { white-space: pre-line; }
 .subtitle { color: #e7bfd8; }
 
+/* Floating romantic hearts */
+.floating-hearts {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-hearts span {
+  position: absolute;
+  bottom: -50px;
+  color: #ff72b6;
+  opacity: 0;
+  font-size: 22px;
+  animation: floatHeart 12s linear infinite;
+}
+
+.floating-hearts span:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-hearts span:nth-child(2) {
+  left: 30%;
+  animation-delay: 3s;
+  font-size: 16px;
+}
+
+.floating-hearts span:nth-child(3) {
+  left: 55%;
+  animation-delay: 6s;
+}
+
+.floating-hearts span:nth-child(4) {
+  left: 75%;
+  animation-delay: 2s;
+  font-size: 18px;
+}
+
+.floating-hearts span:nth-child(5) {
+  left: 90%;
+  animation-delay: 8s;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.65;
+  }
+  85% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(25deg);
+    opacity: 0;
+  }
+           }
+  
 .heart {
   color: #ff72b6;
   font-size: 50px;
@@ -309,6 +371,14 @@ function openSurprise() {
 }
 </script>
 
+<div class="floating-hearts" aria-hidden="true">
+  <span>♥</span>
+  <span>♥</span>
+  <span>♥</span>
+  <span>♥</span>
+  <span>♥</span>
+</div>
+  
 </body>
     </html>
   
