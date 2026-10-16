@@ -326,7 +326,25 @@ footer { text-align: center; color: var(--gold); padding: 30px 12px; }
   margin: 0;
   animation: magicalReveal .5s ease-out;
   }
-         
+   
+/* Rotating magical clock */
+.magic-clock {
+  font-size: 38px;
+  text-align: center;
+  margin: 12px 0;
+  animation: clockFloat 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px #f5c98b);
+}
+
+@keyframes clockFloat {
+  0%, 100% {
+    transform: rotate(-8deg) translateY(0);
+  }
+  50% {
+    transform: rotate(8deg) translateY(-6px);
+  }
+  }
+  
 </style>
 </head>
 <body>
@@ -344,6 +362,9 @@ footer { text-align: center; color: var(--gold); padding: 30px 12px; }
   <p>Manasa, this little surprise is made especially for you.</p>
   <p>Please try on <strong>11/11/2026 at 12:00 AM</strong>.
 There is a special surprise waiting for you that day. ❤️</p>
+  
+<div class="magic-clock" aria-hidden="true">🕰️</div>
+  
   <div class="countdown" id="countdown">Counting down...</div>
 </section>
 
