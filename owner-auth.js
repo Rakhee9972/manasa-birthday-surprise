@@ -29,6 +29,12 @@ if (loginButton) {
       }
 
       status.textContent = "Owner login successful! ❤️";
+      const dashboard = document.getElementById("ownerDashboard");
+
+if (dashboard) {
+  dashboard.style.display = "block";
+  dashboard.scrollIntoView({ behavior: "smooth" });
+        }
     } catch (error) {
       status.textContent = "Login failed: " + error.message;
     } finally {
