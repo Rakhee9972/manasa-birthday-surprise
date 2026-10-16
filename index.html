@@ -286,14 +286,7 @@ function openSurprise() {
   document.getElementById("surprise").scrollIntoView({behavior:"smooth"});
 }
 
-function showFeedback() {
-  const rating = document.getElementById("rating").value;
-  const feedback = document.getElementById("feedback").value.trim();
-  document.getElementById("feedbackPreview").textContent =
-    "Your rating: " + "★".repeat(Number(rating)) +
-    (feedback ? " — " + feedback : "") +
-    " (Preview only; not saved.)";
-}
+
 </script>
   <section id="ownerLogin" style="margin:22px 0;padding:22px;background:#211326;border:1px solid #b85c944d;border-radius:20px;">
   <h2>Owner Login 🔐</h2>
@@ -302,13 +295,24 @@ function showFeedback() {
   <input id="ownerPassword" type="password" placeholder="Password" autocomplete="current-password" style="width:100%;padding:12px;margin:8px 0;">
   <button id="ownerLoginButton" type="button">Login</button>
   <p id="ownerStatus" role="status"></p>
-  </section>
-  <section id="ownerDashboard" style=display:block;  margin:22px 0; padding:22px; border:1px solid #d66aa5; border-radius:18px;">
+
+<section id="ownerDashboard"
+  hidden
+  style="display:none; margin:22px 0; padding:22px; border:1px solid #d66aa5; border-radius:18px;">
+
   <h2>Owner Dashboard 💗</h2>
   <p>Welcome, Owner! ❤️</p>
+
   <h3>Website Feedback</h3>
-  <p id="feedbackList">Feedback will appear here after Firebase saving is configured.</p>
-  </section>
+  <div id="feedbackList">
+    Login to view feedback.
+  </div>
+
+  <button id="ownerLogoutButton" type="button">
+    Logout
+  </button>
+</section>
+    
 <script type="module" src="./owner-auth.js"></script>
 </body>
   </html>
