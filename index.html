@@ -413,6 +413,7 @@ function openSurprise() {
   if (name === "rakhee") {
     surprise.style.display = "block";
     surprise.style.animation = "magicalReveal 1.5s ease-out";
+    surprise.classList.add("midnight-glow");
     lockMessage.style.display = "none";
     unlock.style.display = "none";
     surprise.scrollIntoView({ behavior: "smooth" });
@@ -427,6 +428,7 @@ function openSurprise() {
     }
 
     surprise.style.display = "block";
+    surprise.classList.add("midnight-glow");
     surprise.style.animation = "magicalReveal 1.5s ease-out";
     lockMessage.style.display = "none";
     unlock.style.display = "none";
