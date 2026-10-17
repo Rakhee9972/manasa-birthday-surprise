@@ -232,19 +232,15 @@ function openSurprise() {
   const lockMessage = document.getElementById("lockMessage");
   const unlock = document.getElementById("unlock");
 
-  if (name === "rakhee") {
-    showSurprise(surprise, lockMessage, unlock);
+  if (name !== "manasa") {
+    error.textContent = "Please enter Manasa only. 💗";
     return;
   }
-  if (name === "manasa") {
-    if (new Date() < birthday) {
-      error.textContent = "Please try on 11/11/2026 at 12:00 AM. ❤️ A special surprise is waiting for you!";
-      return;
-    }
-    showSurprise(surprise, lockMessage, unlock);
+  if (new Date() < birthday) {
+    error.textContent = "Please try on 11/11/2026 at 12:00 AM. ❤️ A special surprise is waiting for you!";
     return;
   }
-  error.textContent = "Please enter Manasa only. 💗";
+  showSurprise(surprise, lockMessage, unlock);
 }
 function showSurprise(surprise, lockMessage, unlock) {
   surprise.style.display = "block";
