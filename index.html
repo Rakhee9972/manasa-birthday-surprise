@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,412 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Manasa ❤️</title>
 <style>
-:root {
-  --pink: #ff72b6;
-  --gold: #f5c98b;
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: radial-gradient(ellipse at top, #45163f 0%, #1a0b22 48%, #090711 100%);
-  color: #fff0f6;
-  font-family: Georgia, "Noto Serif", serif;
-  line-height: 1.8;
-}
-header { text-align: center; padding: 48px 18px 28px; }
-h1 {
-  color: var(--gold);
-  font-size: clamp(2.2rem, 9vw, 4rem);
-  line-height: 1.25;
-  text-shadow: 0 0 24px #ff72b655;
-}
-h2 { color: var(--pink); text-align: center; }
-h3 { color: var(--gold); }
-p { white-space: pre-line; }
-.subtitle { color: #e7bfd8; }
-
-/* Floating romantic hearts */
-.floating-hearts {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.floating-hearts span {
-  position: absolute;
-  bottom: -50px;
-  color: #ff72b6;
-  opacity: 0;
-  font-size: 22px;
-  animation: floatHeart 12s linear infinite;
-}
-
-.floating-hearts span:nth-child(1) {
-  left: 10%;
-  animation-delay: 0s;
-}
-
-.floating-hearts span:nth-child(2) {
-  left: 30%;
-  animation-delay: 3s;
-  font-size: 16px;
-}
-
-.floating-hearts span:nth-child(3) {
-  left: 55%;
-  animation-delay: 6s;
-}
-
-.floating-hearts span:nth-child(4) {
-  left: 75%;
-  animation-delay: 2s;
-  font-size: 18px;
-}
-
-.floating-hearts span:nth-child(5) {
-  left: 90%;
-  animation-delay: 8s;
-}
-
-@keyframes floatHeart {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0;
-  }
-  15% {
-    opacity: 0.65;
-  }
-  85% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(-110vh) rotate(25deg);
-    opacity: 0;
-  }
-           }
-  
-.heart {
-  color: #ff72b6;
-  font-size: 50px;
-  animation: beat 1.4s infinite;
-  display: inline-block;
-  line-height: 1.2;
-}
-
-@keyframes beat { 50% { transform: scale(1.25); } }
-  
-@keyframes magicalReveal {
-  from {
-    opacity: 0;
-    transform: translateY(30px) scale(0.97);
-    filter: blur(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
-  }
-}
-  
-main { max-width: 850px; margin: auto; padding: 12px 16px 60px; }
-
-section {
-  background: linear-gradient(
-    145deg,
-    rgba(73, 39, 84, 0.88),
-    rgba(35, 18, 49, 0.95)
-  );
-  border: 1px solid #d5a5f955;
-  border-radius: 24px;
-  padding: 24px 22px;
-  margin: 22px 0;
-  box-shadow: 0 12px 36px #08031366, inset 0 1px #ffffff0c;
-}
-
-button {
-  background: linear-gradient(120deg, #c53d88, #8d4cc4);
-  border: 1px solid #f5c98b88;
-  border-radius: 24px;
-  padding: 12px 22px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  margin: 6px 0;
-}
-input {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border-radius: 10px;
-  border: 1px solid #b85c94;
-  background: #130c1b;
-  color: white;
-  font-size: 1rem;
-}
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
-  gap: 12px;
-}
-  
-/* Magical golden sparkles */
-.sparkles {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.sparkles span {
-  position: absolute;
-  color: #ffe7a3;
-  font-size: 18px;
-  animation: sparkle 3s ease-in-out infinite;
-  opacity: 0;
-  text-shadow: 0 0 12px #ffd76a;
-}
-
-.sparkles span:nth-child(1) { top: 15%; left: 12%; }
-.sparkles span:nth-child(2) { top: 35%; left: 85%; animation-delay: 1s; }
-.sparkles span:nth-child(3) { top: 60%; left: 20%; animation-delay: 2s; }
-.sparkles span:nth-child(4) { top: 78%; left: 78%; animation-delay: .5s; }
-.sparkles span:nth-child(5) { top: 48%; left: 50%; animation-delay: 1.5s; }
-
-@keyframes sparkle {
-  0%, 100% { opacity: 0; transform: scale(.5) rotate(0deg); }
-  50% { opacity: .9; transform: scale(1.3) rotate(45deg); }
-  }
-  
-.love-card {
-  background: #381c37;
-  padding: 16px;
-  border-radius: 14px;
-  border: 1px solid #f5c98b55;
-  text-align: center;
-}
-.poem { color: #ffe4f1; font-size: 1.05rem; }
-.letter { color: #f5dce9; }
-#surprise { display: none; }
-#lockMessage { text-align: center; }
-.countdown { color: var(--gold); font-size: 1.25rem; }
-footer { text-align: center; color: var(--gold); padding: 30px 12px; }
-.small { color: #cbb2c9; font-size: .85rem; }
-  
-/* Midnight celebration glow */
-.midnight-glow {
-  animation: midnightGlow 2s ease-in-out infinite alternate;
-  border: 2px solid #ffd76a !important;
-  box-shadow: 0 0 25px #ff72b6,
-              0 0 50px #f5c98b,
-              0 0 80px #ff72b6 !important;
-}
-
-@keyframes midnightGlow {
-  from {
-    box-shadow: 0 0 15px #ff72b655;
-  }
-  to {
-    box-shadow: 0 0 35px #f5c98bbb, 0 0 55px #ff72b677;
-  }
-  }
-  
-/* Birthday celebration message */
-.celebration-message {
-  text-align: center;
-  padding: 22px 16px;
-  margin: 20px 0;
-  border: 1px solid #ffd76a;
-  border-radius: 22px;
-  background: linear-gradient(135deg, #401b49, #211027);
-  box-shadow: 0 0 22px #ff72b688, 0 0 40px #f5c98b55;
-  animation: midnightGlow 2s ease-in-out infinite alternate;
-}
-
-.celebration-message h2 {
-  color: #ffd98b;
-  text-shadow: 0 0 18px #ff72b6;
-}
-
-.celebration-message h3 {
-  color: #ff85c1;
-}
-
-.celebration-message p {
-  color: #fff0fa;
-  }
-  
-/* Secret love letter design */
-.secret-letter {
-  text-align: center;
-  background: linear-gradient(145deg, #3b1d48, #21102f);
-  border: 1px solid #e9b8dc;
-  border-radius: 24px;
-  padding: 24px 18px;
-  margin: 24px 0;
-  box-shadow: 0 0 22px #ff72b655;
-}
-
-.secret-letter h2 {
-  color: #ffd98b;
-  text-shadow: 0 0 14px #ff72b677;
-}
-
-.secret-letter summary {
-  cursor: pointer;
-  color: #ff9dce;
-  font-weight: bold;
-  padding: 16px;
-  border: 1px solid #ffd98b88;
-  border-radius: 16px;
-  margin-top: 16px;
-  background: #ffffff0a;
-}
-
-.letter-paper {
-  margin-top: 18px;
-  padding: 20px;
-  text-align: left;
-  line-height: 1.8;
-  color: #4a2346;
-  background: linear-gradient(135deg, #fff0f7, #ffe8c9);
-  border-radius: 14px;
-  box-shadow: 0 8px 24px #00000033;
-}
-
-.letter-paper p {
-  color: #4a2346;
-    }
-  
-/* 11 Reasons - dreamy fairytale cards */
-.reasons-section {
-  text-align: center;
-  padding: 24px 16px;
-  border: 1px solid #d5a5f977;
-  border-radius: 24px;
-  background: linear-gradient(145deg, #392044, #21102f);
-  box-shadow: 0 0 24px #ff72b633;
-}
-
-.reasons-section > p {
-  color: #e7bfd8;
-}
-
-.reason-card {
-  margin: 12px 0;
-  text-align: left;
-  border: 1px solid #f5c98b66;
-  border-radius: 16px;
-  background: #ffffff08;
-  overflow: hidden;
-}
-
-.reason-card summary {
-  padding: 16px;
-  color: #ff9dce;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.reason-card details[open] summary {
-  color: #ffd98b;
-  background: #ff72b611;
-}
-
-.reason-card details p {
-  padding: 0 16px 16px;
-  color: #fff0f6;
-  margin: 0;
-  animation: magicalReveal .5s ease-out;
-  }
-   
-/* Rotating magical clock */
-.magic-clock {
-  font-size: 38px;
-  text-align: center;
-  margin: 12px 0;
-  animation: clockFloat 3s ease-in-out infinite;
-  filter: drop-shadow(0 0 12px #f5c98b);
-}
-
-@keyframes clockFloat {
-  0%, 100% {
-    transform: rotate(-8deg) translateY(0);
-  }
-  50% {
-    transform: rotate(8deg) translateY(-6px);
-  }
-  }
-  
-.heart-sticker {
-  text-align: center;
-  margin: 18px auto;
-  animation: heartFloat 3s ease-in-out infinite;
-}
-
-.heart-sticker img {
-  width: 190px;
-  max-width: 70%;
-  height: auto;
-  filter: drop-shadow(0 0 14px #ff72b6)
-          drop-shadow(0 0 24px #f5c98b);
-}
-
-@keyframes heartFloat {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-10px) scale(1.04);
-  }
-                      }
-  
-.sunset-opening {
-  width: 100%;
-  margin: 18px auto 25px;
-  text-align: center;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 0 22px #f5c98b88,
-              0 0 40px #ff72b655;
-}
-
-.sunset-opening img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  animation: magicalReveal 1.5s ease-out;
-  }
-  
-.wife-letter-ending {
-  width: 100%;
-  margin: 30px auto;
-  text-align: center;
-  overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 0 24px #f5c98b88;
-}
-
-.wife-letter-ending img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  }
-  
+:root{--pink:#ff72b6;--gold:#f5c98b}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at top,#45163f 0%,#1a0b22 48%,#090711 100%);color:#fff0f6;font-family:Georgia,"Noto Serif",serif;line-height:1.8}
+header{text-align:center;padding:34px 18px 24px}
+h1{color:var(--gold);font-size:clamp(2.2rem,9vw,4rem);line-height:1.25;text-shadow:0 0 24px #ff72b655}
+h2{text-align:center;color:var(--pink)} h3{color:var(--gold)} p{white-space:pre-line}.subtitle{color:#e7bfd8}
+main{max-width:850px;margin:auto;padding:12px 16px 60px}
+section{background:linear-gradient(145deg,rgba(73,39,84,.88),rgba(35,18,49,.95));border:1px solid #d5a5f955;border-radius:24px;padding:24px 22px;margin:22px 0;box-shadow:0 12px 36px #08031366,inset 0 1px #ffffff0c}
+button{background:linear-gradient(120deg,#c53d88,#8d4cc4);border:1px solid #f5c98b88;border-radius:24px;padding:12px 22px;color:white;font-size:1rem;cursor:pointer;margin:6px 0}
+input{width:100%;padding:12px;margin:8px 0;border-radius:10px;border:1px solid #b85c94;background:#130c1b;color:white;font-size:1rem}
+#surprise{display:none}#lockMessage{text-align:center}.countdown{color:var(--gold);font-size:1.1rem}footer{text-align:center;color:var(--gold);padding:30px 12px}
+.heart{color:#ff72b6;font-size:42px;animation:beat 1.4s infinite;display:inline-block;line-height:1.2}
+@keyframes beat{50%{transform:scale(1.2)}}
+@keyframes magicalReveal{from{opacity:0;transform:translateY(24px) scale(.98);filter:blur(4px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@keyframes floatHeart{0%{transform:translateY(0);opacity:0}15%{opacity:.65}85%{opacity:.5}100%{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+.floating-hearts{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}.floating-hearts span{position:absolute;bottom:-50px;color:#ff72b6;opacity:0;font-size:22px;animation:floatHeart 12s linear infinite}.floating-hearts span:nth-child(1){left:10%}.floating-hearts span:nth-child(2){left:30%;animation-delay:3s;font-size:16px}.floating-hearts span:nth-child(3){left:55%;animation-delay:6s}.floating-hearts span:nth-child(4){left:75%;animation-delay:2s;font-size:18px}.floating-hearts span:nth-child(5){left:90%;animation-delay:8s}
+.sparkles{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:1}.sparkles span{position:absolute;color:#ffe7a3;font-size:18px;animation:sparkle 3s ease-in-out infinite;opacity:0;text-shadow:0 0 12px #ffd76a}.sparkles span:nth-child(1){top:15%;left:12%}.sparkles span:nth-child(2){top:35%;left:85%;animation-delay:1s}.sparkles span:nth-child(3){top:60%;left:20%;animation-delay:2s}.sparkles span:nth-child(4){top:78%;left:78%;animation-delay:.5s}.sparkles span:nth-child(5){top:48%;left:50%;animation-delay:1.5s}
+@keyframes sparkle{0%,100%{opacity:0;transform:scale(.5)}50%{opacity:.9;transform:scale(1.3) rotate(45deg)}}
+.love-card{background:#381c37;padding:16px;border-radius:14px;border:1px solid #f5c98b55;text-align:center}.poem{color:#ffe4f1;font-size:1.05rem}.letter{color:#f5dce9}.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.magic-clock{font-size:38px;text-align:center;margin:12px 0;animation:clockFloat 3s ease-in-out infinite;filter:drop-shadow(0 0 12px #f5c98b)}@keyframes clockFloat{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(8deg) translateY(-6px)}}
+.heart-sticker{text-align:center;margin:18px auto;animation:heartFloat 3s ease-in-out infinite}.heart-sticker img{width:190px;max-width:70%;height:auto;filter:drop-shadow(0 0 14px #ff72b6) drop-shadow(0 0 24px #f5c98b)}@keyframes heartFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-10px) scale(1.04)}}
+.sunset-opening,.wife-letter-ending{width:100%;margin:18px auto 25px;text-align:center;overflow:hidden;border-radius:20px;box-shadow:0 0 22px #f5c98b88,0 0 40px #ff72b655}
+.sunset-opening img,.wife-letter-ending img{display:block;width:100%;height:auto;border-radius:20px}.sunset-opening img{animation:magicalReveal 1.5s ease-out}
+.celebration-message{ text-align:center;padding:22px 16px;margin:20px 0;border:1px solid #ffd76a;border-radius:22px;background:linear-gradient(135deg,#401b49,#211027);box-shadow:0 0 22px #ff72b688,0 0 40px #f5c98b55}
+.celebration-message h2{color:#ffd98b;text-shadow:0 0 18px #ff72b6}.celebration-message h3{color:#ff85c1}
+.secret-letter,.reasons-section{ text-align:center;padding:24px 16px;border:1px solid #d5a5f977;border-radius:24px;background:linear-gradient(145deg,#392044,#21102f);box-shadow:0 0 24px #ff72b633}
+.secret-letter h2{color:#ffd98b}.secret-letter summary,.reason-card summary{cursor:pointer;color:#ff9dce;font-weight:bold;padding:16px;border:1px solid #ffd98b88;border-radius:16px;margin-top:16px;background:#ffffff0a}
+.letter-paper{margin-top:18px;padding:20px;text-align:left;line-height:1.8;color:#4a2346;background:linear-gradient(135deg,#fff0f7,#ffe8c9);border-radius:14px;box-shadow:0 8px 24px #00000033}.letter-paper p{color:#4a2346}
+.reason-card{margin:12px 0;text-align:left;border:1px solid #f5c98b66;border-radius:16px;background:#ffffff08;overflow:hidden}.reason-card p{padding:0 16px 16px;margin:0;animation:magicalReveal .5s ease-out}
+.midnight-glow{border:2px solid #ffd76a!important;box-shadow:0 0 25px #ff72b6,0 0 50px #f5c98b,0 0 80px #ff72b6!important}
+.small{color:#cbb2c9;font-size:.85rem}#error{color:#ffd98b;text-align:center;min-height:1.5em}
 </style>
 </head>
 <body>
-
 <header>
-  
-<div class="sunset-opening">
-  <img src="manasa-sunset.png.png" alt="Manasa at sunset">
-</div>
-  
   <div class="heart">♥ ♥ ♥</div>
   <h1>For You, Manasa</h1>
   <p class="subtitle">A little universe made with love, just for you ✨</p>
@@ -424,15 +52,8 @@ footer { text-align: center; color: var(--gold); padding: 30px 12px; }
   <p>Manasa, this little surprise is made especially for you.</p>
   <p>Please try on <strong>11/11/2026 at 12:00 AM</strong>.
 There is a special surprise waiting for you that day. ❤️</p>
-  
-
-
-<div class="magic-clock" aria-hidden="true">🪄✨</div>
-<div class="heart-sticker">
-  <img src="magic-heart.png.png" alt="Magical 3D heart">
-</div>
-
-  
+  <div class="magic-clock" aria-hidden="true">🪄✨</div>
+  <div class="heart-sticker"><img src="magic-heart.png.png" alt="Magical 3D heart"></div>
   <div class="countdown" id="countdown">Counting down...</div>
 </section>
 
@@ -442,205 +63,146 @@ There is a special surprise waiting for you that day. ❤️</p>
   <input id="visitorName" placeholder="Your name" autocomplete="off">
   <button type="button" onclick="openSurprise()">Open My Heart ❤️</button>
   <p id="error" role="status"></p>
-
+  <p class="small">Your special surprise is date-locked until 11 November 2026.</p>
 </section>
 
 <div id="surprise">
-  <div class="sunset-opening">
-"<img src="wife-letter.png.png" alt="A special letter for Manasa">"
-<section>
-  
-<div class="celebration-message">
-  <h2>✨ It's Your Magical Moment! ✨</h2>
-  <h3>Happy Birthday, Manasa! 🎂💖</h3>
-  <p>May your smile shine brighter than every star, and may your dreams bloom into beautiful memories. 🌸</p>
-  <p>With all my love — It's your Nanna ❤️</p>
-</div>
-  
-  <h2>Happy Birthday, Manasa! 🎂</h2>
-  
-<section class="secret-letter">
-  <h2>💌 A Little Secret for You</h2>
-  <p>Manasa, there is something special waiting for you...</p>
-  <details>
-    <summary>💗 Open Your Secret Letter</summary>
-    <div class="letter-paper">
-      <p>Dear Manasa, ❤️</p>
-      <p>You are someone who deserves happiness, peace, and beautiful moments every single day. I hope this birthday brings you countless reasons to smile.</p>
-      <p>Never forget how special you are. Keep smiling and keep shining. 🌷</p>
-      <p>With love,<br>It's your Nanna ❤️</p>
+  <!-- The sunset image appears only after successful access -->
+  <div class="sunset-opening"><img src="manasa-sunset.png.png" alt="Manasa at sunset"></div>
+
+  <section class="celebration-message">
+    <h2>✨ It's Your Magical Moment! ✨</h2>
+    <h3>Happy Birthday, Manasa! 🎂💖</h3>
+    <p>May your smile shine brighter than every star, and may your dreams bloom into beautiful memories. 🌸</p>
+    <p>With all my love — It's your Nanna ❤️</p>
+  </section>
+
+  <section><h2>Happy Birthday, Manasa! 🎂</h2>
+    <p>Today is a celebration of you — your smile, your dreams, your kindness, and all the beautiful possibilities waiting ahead. May your day be full of warmth, peace, and happiness. ❤️</p>
+  </section>
+
+  <section class="secret-letter">
+    <h2>💌 A Little Secret for You</h2>
+    <p>Manasa, there is something special waiting for you...</p>
+    <details><summary>💗 Open Your Secret Letter</summary>
+      <div class="letter-paper">
+        <p>Dear Manasa, ❤️</p>
+        <p>You are someone who deserves happiness, peace, and beautiful moments every single day. I hope this birthday brings you countless reasons to smile.</p>
+        <p>Never forget how special you are. Keep smiling and keep shining. 🌷</p>
+        <p>With love,<br>It's your Nanna ❤️</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="reasons-section">
+    <h2>🌷 11 Reasons You Are Special</h2><p>Tap each little heart to discover a reason. 💗</p>
+    <div class="reason-card"><details><summary>💖 Reason 1</summary><p>Your beautiful smile can brighten a difficult day.</p></details></div>
+    <div class="reason-card"><details><summary>🌸 Reason 2</summary><p>You deserve all the happiness life has to offer.</p></details></div>
+    <div class="reason-card"><details><summary>✨ Reason 3</summary><p>Your dreams deserve to come true.</p></details></div>
+    <div class="reason-card"><details><summary>🦋 Reason 4</summary><p>Your uniqueness makes you wonderfully special.</p></details></div>
+    <div class="reason-card"><details><summary>🌷 Reason 5</summary><p>You deserve kindness, respect, and peace.</p></details></div>
+    <div class="reason-card"><details><summary>⭐ Reason 6</summary><p>Your presence can make ordinary moments memorable.</p></details></div>
+    <div class="reason-card"><details><summary>💝 Reason 7</summary><p>You deserve people who appreciate the real you.</p></details></div>
+    <div class="reason-card"><details><summary>🌙 Reason 8</summary><p>Your happiness matters every day, not just on birthdays.</p></details></div>
+    <div class="reason-card"><details><summary>🎀 Reason 9</summary><p>You have so many beautiful possibilities ahead of you.</p></details></div>
+    <div class="reason-card"><details><summary>🕊️ Reason 10</summary><p>You deserve a life filled with love and peaceful moments.</p></details></div>
+    <div class="reason-card"><details><summary>❤️ Reason 11</summary><p>Because you are Manasa — and that itself makes this wish special.</p></details></div>
+  </section>
+
+  <section><p style="text-align:center">Nee roju nee navvula laage andhamga undaali. ❤️</p>
+    <div class="card-grid">
+      <div class="love-card">🌹<br><strong>A Beautiful Soul</strong><br>Your kindness makes ordinary moments special.</div>
+      <div class="love-card">✨<br><strong>Your Smile</strong><br>A little light that makes a day brighter.</div>
+      <div class="love-card">💖<br><strong>Your Presence</strong><br>Some people make life feel warmer just by being there.</div>
     </div>
-  </details>
-</section>
-  
-<section class="reasons-section">
-  <h2>🌷 11 Reasons You Are Special</h2>
-  <p>Tap each little heart to discover a reason. 💗</p>
+  </section>
 
-  <div class="reason-card">
-    <details><summary>💖 Reason 1</summary><p>Your beautiful smile can brighten a difficult day.</p></details>
-  </div>
-  <div class="reason-card">
-    <details><summary>🌸 Reason 2</summary><p>You deserve all the happiness life has to offer.</p></details>
-  </div>
-  <div class="reason-card">
-    <details><summary>✨ Reason 3</summary><p>Your dreams deserve to come true.</p></details>
-  </div>
-  <div class="reason-card">
-    <details><summary>🦋 Reason 4</summary><p>Your uniqueness makes you wonderfully special.</p></details>
-  </div>
-  <div class="reason-card">
-    <details><summary>🌷 Reason 5</summary><p>You deserve kindness, respect, and peace.</p></details>
-  </div>
-  <div class="reason-card">
-    <details><summary>⭐ Reason 6</summary><p>Your presence can make ordinary moments memorable.</p></details>
-  </div>
-  <div class="reason-card">
-    <details><summary>💝 Reason 7</summary><p>You deserve people who appreciate the real you.</p></details>
-  </div>
-  <div class="reason-card">
-    <details><summary>🌙 Reason 8</summary><p>Your happiness matters every day, not just on birthdays.</p></details>
-  </div>
-  <div class="reason-card">
-    <details><summary>🎀 Reason 9</summary><p>You have so many beautiful possibilities ahead of you.</p></details>
-  </div>
-  <div class="reason-card">
-    <details><summary>🕊️ Reason 10</summary><p>You deserve a life filled with love and peaceful moments.</p></details>
-  </div>
-  <div class="reason-card">
-    <details><summary>❤️ Reason 11</summary><p>Because you are Manasa — and that itself makes this wish special.</p></details>
-  </div>
-                                  </section>
-  
-  <p style="text-align:center">Nee roju nee navvula laage andhamga undaali. ❤️</p>
-  <div class="card-grid">
-    <div class="love-card">🌹<br><strong>A Beautiful Soul</strong><br>Your kindness makes ordinary moments special.</div>
-    <div class="love-card">✨<br><strong>Your Smile</strong><br>A little light that makes a day brighter.</div>
-    <div class="love-card">💖<br><strong>Your Presence</strong><br>Some people make life feel warmer just by being there.</div>
-  </div>
-</section>
+  <section><h2>మానసా… నీకోసం ❤️</h2>
+    <div class="poem">
+మానసా… నీ పేరు పలికితే మనసులో మల్లెలు పూస్తాయి,
+నీ గురించి ఆలోచిస్తే నిశ్శబ్దంలోనూ రాగాలు వినిపిస్తాయి.
+నీ నవ్వు ఉదయించే సూర్యుడి తొలి కిరణంలా,
+చీకటిలో ఆశను నింపే వెన్నెల వెలుగులా.
 
-<section>
-  <h2>మానసా… నీకోసం ❤️</h2>
-  <div class="poem">
-మానసా… నీ పేరు పలికితే మనసులో మల్లెలు పూస్తాయి,<br>
-నీ గురించి ఆలోచిస్తే నిశ్శబ్దంలోనూ రాగాలు వినిపిస్తాయి.<br>
-నీ నవ్వు ఉదయించే సూర్యుడి తొలి కిరణంలా,<br>
-చీకటిలో ఆశను నింపే వెన్నెల వెలుగులా.<br><br>
+నీ కళ్ళలో ఏదో చెప్పని కథ కనిపిస్తుంది,
+చూసిన ప్రతి క్షణం మనసు కొత్తగా స్పందిస్తుంది.
+నీ చూపు తాకితే కాలమే కాసేపు ఆగినట్టుంటుంది,
+నీ చిరునవ్వు చూస్తే బాధ కూడా దారి మళ్లించినట్టుంటుంది.
 
-నీ కళ్ళలో ఏదో చెప్పని కథ కనిపిస్తుంది,<br>
-చూసిన ప్రతి క్షణం మనసు కొత్తగా స్పందిస్తుంది.<br>
-నీ చూపు తాకితే కాలమే కాసేపు ఆగినట్టుంటుంది,<br>
-నీ చిరునవ్వు చూస్తే బాధ కూడా దారి మళ్లించినట్టుంటుంది.<br><br>
+పూల అందం గురించి కవులు ఎన్నో మాటలు చెప్పారు,
+చందమామ అందాన్ని చూసి ఎన్నో పాటలు రాశారు.
+కానీ నీ అందాన్ని వర్ణించడానికి మాటలు సరిపోవు,
+నీ మనసులోని మంచితనాన్ని కొలవడానికి కొలమానం దొరకదు.
 
-పూల అందం గురించి కవులు ఎన్నో మాటలు చెప్పారు,<br>
-చందమామ అందాన్ని చూసి ఎన్నో పాటలు రాశారు.<br>
-కానీ నీ అందాన్ని వర్ణించడానికి మాటలు సరిపోవు,<br>
-నీ మనసులోని మంచితనాన్ని కొలవడానికి కొలమానం దొరకదు.<br><br>
+నీ జుట్టులో గాలి ఆడే ఆ చిన్న క్షణం అందమైన దృశ్యం,
+నీ ముఖంలో మెరిసే సంతోషం హృదయానికి మధురమైన కావ్యం.
+నీ మాటల్లోని మాధుర్యం ఉదయపు పక్షుల గానంలా,
+నీ నడకలోని హుందాతనం పూలబాటలోని పరిమళంలా.
 
-నీ జుట్టులో గాలి ఆడే ఆ చిన్న క్షణం అందమైన దృశ్యం,<br>
-నీ ముఖంలో మెరిసే సంతోషం హృదయానికి మధురమైన కావ్యం.<br>
-నీ మాటల్లోని మాధుర్యం ఉదయపు పక్షుల గానంలా,<br>
-నీ నడకలోని హుందాతనం పూలబాటలోని పరిమళంలా.<br><br>
+నువ్వు నవ్వితే ప్రపంచం కొంచెం అందంగా మారినట్టు,
+నువ్వు సంతోషంగా ఉంటే నా ఆలోచనలన్నీ వెలిగినట్టు.
+నీ కలలన్నీ ఒక్కొక్కటిగా నిజమవ్వాలని కోరుకుంటాను,
+నీ కళ్లలో కన్నీటి బదులు ఆనందమే ఉండాలని ఆశిస్తాను.
 
-నువ్వు నవ్వితే ప్రపంచం కొంచెం అందంగా మారినట్టు,<br>
-నువ్వు సంతోషంగా ఉంటే నా ఆలోచనలన్నీ వెలిగినట్టు.<br>
-నీ కలలన్నీ ఒక్కొక్కటిగా నిజమవ్వాలని కోరుకుంటాను,<br>
-నీ కళ్లలో కన్నీటి బదులు ఆనందమే ఉండాలని ఆశిస్తాను.<br><br>
+నీకు ఇష్టమైన ఉదయాలు పూల పరిమళంతో మొదలవ్వాలి,
+నీ ప్రతి అడుగులో కొత్త ఆశ నీకు తోడుగా నిలవాలి.
+నీ దారిలో ఎదురయ్యే కష్టాలన్నీ ధైర్యంగా దాటాలి,
+నీ హృదయం కోరుకున్న సంతోషం నీ చెంతకు చేరాలి.
 
-నీకు ఇష్టమైన ఉదయాలు పూల పరిమళంతో మొదలవ్వాలి,<br>
-నీ ప్రతి అడుగులో కొత్త ఆశ నీకు తోడుగా నిలవాలి.<br>
-నీ దారిలో ఎదురయ్యే కష్టాలన్నీ ధైర్యంగా దాటాలి,<br>
-నీ హృదయం కోరుకున్న సంతోషం నీ చెంతకు చేరాలి.<br><br>
+నీ పుట్టినరోజు ఒక తేదీ మాత్రమే కాదు,
+నీ అందమైన ఉనికిని జరుపుకునే ప్రత్యేకమైన రోజు.
+ఈ రోజు నీ పెదవులపై చిరునవ్వు ఎప్పటికీ నిలవాలి,
+నీ మనసులోని ప్రతి చిన్న కోరికకు రెక్కలు రావాలి.
 
-నీ పుట్టినరోజు ఒక తేదీ మాత్రమే కాదు,<br>
-నీ అందమైన ఉనికిని జరుపుకునే ప్రత్యేకమైన రోజు.<br>
-ఈ రోజు నీ పెదవులపై చిరునవ్వు ఎప్పటికీ నిలవాలి,<br>
-నీ మనసులోని ప్రతి చిన్న కోరికకు రెక్కలు రావాలి.<br><br>
+మానసా… నువ్వు ఎప్పుడూ నీలా అందంగా ఉండాలి,
+నీ మంచితనం నీ జీవితమంతా వెలుగులు నింపాలి.
+నీ కలలకు ఆకాశమే హద్దుగా మారాలి,
+నీ భవిష్యత్తు ప్రేమతో, ప్రశాంతతతో నిండిపోవాలి.
 
-మానసా… నువ్వు ఎప్పుడూ నీలా అందంగా ఉండాలి,<br>
-నీ మంచితనం నీ జీవితమంతా వెలుగులు నింపాలి.<br>
-నీ కలలకు ఆకాశమే హద్దుగా మారాలి,<br>
-నీ భవిష్యత్తు ప్రేమతో, ప్రశాంతతతో నిండిపోవాలి.<br><br>
-
-ఈ చిన్న కవిత నీ అందానికి పూర్తి వర్ణన కాదు,<br>
-నీ ప్రత్యేకతను చెప్పడానికి ఇది ఒక చిన్న ప్రయత్నం మాత్రమే.<br>
-నీ నవ్వు ఎప్పుడూ ఇలాగే మధురంగా ఉండాలి,<br>
+ఈ చిన్న కవిత నీ అందానికి పూర్తి వర్ణన కాదు,
+నీ ప్రత్యేకతను చెప్పడానికి ఇది ఒక చిన్న ప్రయత్నం మాత్రమే.
+నీ నవ్వు ఎప్పుడూ ఇలాగే మధురంగా ఉండాలి,
 నీ జీవితం ప్రతి రోజూ ఒక అందమైన జ్ఞాపకంగా మారాలి. ❤️
-  </div>
-</section>
+    </div>
+  </section>
 
-<section>
-  <h2>A Letter From My Heart 💌</h2>
-  <div class="letter">
+  <section><h2>A Letter From My Heart 💌</h2><div class="letter">
 Dear Manasa,<br><br>
 Some people bring a little extra warmth into the world simply by being themselves. Your smile, your presence, and the person you are make you truly special.<br><br>
 On your birthday, I wish you more than gifts or beautiful words. I wish you peaceful mornings, reasons to laugh, people who genuinely care for you, courage when life becomes difficult, and dreams that slowly turn into reality.<br><br>
 May you always remember that your worth is not measured by anyone's opinion. You deserve kindness, respect, happiness, and a life filled with moments that make your heart feel light.<br><br>
 I hope this small surprise brings a smile to your face and becomes a sweet memory you can revisit whenever you need a little happiness.<br><br>
 Happy Birthday, Manasa. May the coming year be gentle with your heart and generous with your dreams.<br><br>
-With warm wishes and heartfelt affection,<br>
 <strong>It's your Nanna ❤️</strong>
-  </div>
-</section>
+  </div></section>
 
-<section>
-  <h2>ನಿನಗಾಗಿ ಒಂದು ಹೃದಯದ ಮಾತು 💗</h2>
-  <div class="letter">
+  <section><h2>ನಿನಗಾಗಿ ಒಂದು ಹೃದಯದ ಮಾತು 💗</h2><div class="letter">
 ಪ್ರಿಯ ಮಾನಸಾ,<br><br>
 ನಿನ್ನ ಜನ್ಮದಿನದಂದು ನಿನ್ನ ಜೀವನ ಸಂತೋಷ, ಪ್ರೀತಿ ಮತ್ತು ಸುಂದರ ಕ್ಷಣಗಳಿಂದ ತುಂಬಿರಲಿ ಎಂದು ಹಾರೈಸುತ್ತೇನೆ. ನಿನ್ನ ನಗು ಯಾವಾಗಲೂ ಹೀಗೆಯೇ ಮಧುರವಾಗಿರಲಿ. ನಿನ್ನ ಒಳ್ಳೆಯ ಮನಸ್ಸು ನಿನಗೆ ಇನ್ನಷ್ಟು ಒಳ್ಳೆಯ ಜನರನ್ನು ಪರಿಚಯಿಸಲಿ.<br><br>
 ನೀನು ಕಾಣುವ ಪ್ರತಿಯೊಂದು ಕನಸಿಗೂ ಹೊಸ ದಾರಿ ಸಿಗಲಿ. ಕಷ್ಟದ ದಿನಗಳಲ್ಲಿ ಧೈರ್ಯ ನಿನ್ನ ಜೊತೆಯಾಗಿರಲಿ. ಸಂತೋಷದ ದಿನಗಳಲ್ಲಿ ನಿನ್ನ ನಗು ಇನ್ನಷ್ಟು ಪ್ರಕಾಶಿಸಲಿ. ನಿನಗೆ ಶಾಂತಿ, ಗೌರವ, ಆರೋಗ್ಯ ಮತ್ತು ಮನಸ್ಸಿಗೆ ನೆಮ್ಮದಿ ನೀಡುವ ಜೀವನ ಸಿಗಲಿ.<br><br>
 ಈ ಚಿಕ್ಕ ಉಡುಗೊರೆ ನಿನ್ನ ಮುಖದಲ್ಲಿ ಒಂದು ಸುಂದರ ನಗುವನ್ನು ಮೂಡಿಸಿದರೆ, ಅದೇ ನನಗೆ ಸಂತೋಷ. ನಿನ್ನ ವಿಶೇಷ ದಿನವು ನಿನ್ನಂತೆಯೇ ಸುಂದರವಾಗಿರಲಿ.<br><br>
 ಹುಟ್ಟುಹಬ್ಬದ ಹಾರ್ದಿಕ ಶುಭಾಶಯಗಳು, ಮಾನಸಾ! ❤️<br><br>
 <strong>It's your Nanna ❤️</strong>
-  </div>
-</section>
+  </div></section>
 
-<section>
-  <h2>Six Little Birthday Wishes 🌷</h2>
-  <ol>
-    <li>May your smile always find a reason to shine.</li>
-    <li>May your dreams become beautiful memories.</li>
-    <li>May kindness find its way back to you.</li>
-    <li>May every new beginning bring you courage.</li>
-    <li>May you always feel loved, valued, and respected.</li>
-    <li>May this year be one of your happiest chapters.</li>
-  </ol>
-</section>
+  <section><h2>Six Little Birthday Wishes 🌷</h2><ol>
+    <li>May your smile always find a reason to shine.</li><li>May your dreams become beautiful memories.</li><li>May kindness find its way back to you.</li><li>May every new beginning bring you courage.</li><li>May you always feel loved, valued, and respected.</li><li>May this year be one of your happiest chapters.</li>
+  </ol></section>
+  <section><h2>ಆರು ಸುಂದರ ಹಾರೈಕೆಗಳು 🌸</h2><ol>
+    <li>ನಿನ್ನ ಜೀವನ ಸದಾ ಸಂತೋಷದಿಂದ ತುಂಬಿರಲಿ.</li><li>ನಿನ್ನ ಕನಸುಗಳು ಒಂದೊಂದಾಗಿ ನನಸಾಗಲಿ.</li><li>ನಿನ್ನ ನಗು ಎಂದಿಗೂ ಮಾಸದಿರಲಿ.</li><li>ನಿನಗೆ ಒಳ್ಳೆಯ ಸ್ನೇಹಿತರು ಮತ್ತು ಪ್ರೀತಿ ದೊರೆಯಲಿ.</li><li>ಪ್ರತಿ ಕಷ್ಟವನ್ನೂ ಎದುರಿಸುವ ಧೈರ್ಯ ಸಿಗಲಿ.</li><li>ಈ ವರ್ಷ ನಿನ್ನ ಜೀವನದ ಅತ್ಯಂತ ಸುಂದರ ವರ್ಷವಾಗಲಿ.</li>
+  </ol></section>
 
-<section>
-  <h2>ಆರು ಸುಂದರ ಹಾರೈಕೆಗಳು 🌸</h2>
-  <ol>
-    <li>ನಿನ್ನ ಜೀವನ ಸದಾ ಸಂತೋಷದಿಂದ ತುಂಬಿರಲಿ.</li>
-    <li>ನಿನ್ನ ಕನಸುಗಳು ಒಂದೊಂದಾಗಿ ನನಸಾಗಲಿ.</li>
-    <li>ನಿನ್ನ ನಗು ಎಂದಿಗೂ ಮಾಸದಿರಲಿ.</li>
-    <li>ನಿನಗೆ ಒಳ್ಳೆಯ ಸ್ನೇಹಿತರು ಮತ್ತು ಪ್ರೀತಿ ದೊರೆಯಲಿ.</li>
-    <li>ಪ್ರತಿ ಕಷ್ಟವನ್ನೂ ಎದುರಿಸುವ ಧೈರ್ಯ ಸಿಗಲಿ.</li>
-    <li>ಈ ವರ್ಷ ನಿನ್ನ ಜೀವನದ ಅತ್ಯಂತ ಸುಂದರ ವರ್ಷವಾಗಲಿ.</li>
-  </ol>
-</section>
-
-<section>
-  <h2>Why You Are Special ✨</h2>
-  <div class="card-grid">
+  <section><h2>Why You Are Special ✨</h2><div class="card-grid">
     <div class="love-card">🌷<h3>Your Beauty</h3>Your own unique way of bringing beauty into a moment.</div>
     <div class="love-card">💎<h3>Your Heart</h3>The kindness and warmth that make you who you are.</div>
     <div class="love-card">🌙<h3>Your Dreams</h3>May you always have the courage to follow them.</div>
     <div class="love-card">🦋<h3>Your Journey</h3>May each chapter help you grow and glow.</div>
-  </div>
-</section>
+  </div></section>
+  <section><h2>A Wish for Your Future 🌠</h2><p>Manasa, may your future be filled with peaceful days, genuine affection, meaningful achievements, and beautiful surprises. May you never have to make yourself smaller to fit into someone else's world. Keep being yourself, keep dreaming, and keep finding reasons to smile.</p></section>
 
-<section>
-  <h2>A Wish for Your Future 🌠</h2>
-  <p>Manasa, may your future be filled with peaceful days, genuine affection, meaningful achievements, and beautiful surprises. May you never have to make yourself smaller to fit into someone else's world. Keep being yourself, keep dreaming, and keep finding reasons to smile.</p>
-</section>
-
-<footer>
-  Made with love, for one special soul.<br>
-  <span class="heart">♥</span><br><br>
-  <strong>It's your Nanna ❤️</strong>
-</footer>
-
+  <!-- The couple photo appears at the very end of the surprise -->
+  <div class="wife-letter-ending"><img src="wife-letter.png.png" alt="A special photo of us together"></div>
+  <footer>Made with love, for one special soul.<br><span class="heart">♥</span><br><br><strong>It's your Nanna ❤️</strong></footer>
 </div>
 </main>
 
@@ -650,21 +212,16 @@ const countdown = document.getElementById("countdown");
 
 function updateCountdown() {
   const diff = birthday - new Date();
-
   if (diff <= 0) {
     countdown.textContent = "Your special moment is here ❤️";
     return;
   }
-
   const days = Math.floor(diff / 86400000);
   const hours = Math.floor((diff % 86400000) / 3600000);
   const minutes = Math.floor((diff % 3600000) / 60000);
   const seconds = Math.floor((diff % 60000) / 1000);
-
-  countdown.textContent =
-    `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+  countdown.textContent = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
 }
-
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
@@ -676,52 +233,33 @@ function openSurprise() {
   const unlock = document.getElementById("unlock");
 
   if (name === "rakhee") {
-    surprise.style.display = "block";
-    surprise.style.animation = "magicalReveal 1.5s ease-out";
-    surprise.classList.add("midnight-glow");
-    lockMessage.style.display = "none";
-    unlock.style.display = "none";
-    surprise.scrollIntoView({ behavior: "smooth" });
+    showSurprise(surprise, lockMessage, unlock);
     return;
   }
-
   if (name === "manasa") {
     if (new Date() < birthday) {
-      error.textContent =
-        "Please try on 11/11/2026 at 12:00 AM. ❤️ A special surprise is waiting for you!";
+      error.textContent = "Please try on 11/11/2026 at 12:00 AM. ❤️ A special surprise is waiting for you!";
       return;
     }
-
-    surprise.style.display = "block";
-    surprise.classList.add("midnight-glow");
-    surprise.style.animation = "magicalReveal 1.5s ease-out";
-    lockMessage.style.display = "none";
-    unlock.style.display = "none";
-    surprise.scrollIntoView({ behavior: "smooth" });
+    showSurprise(surprise, lockMessage, unlock);
     return;
   }
-
-  error.textContent = "Please enter Manasa only no other names will be taken. 💗";
+  error.textContent = "Please enter Manasa only. 💗";
 }
+function showSurprise(surprise, lockMessage, unlock) {
+  surprise.style.display = "block";
+  surprise.style.animation = "magicalReveal 1.5s ease-out";
+  surprise.classList.add("midnight-glow");
+  lockMessage.style.display = "none";
+  unlock.style.display = "none";
+  surprise.scrollIntoView({behavior:"smooth"});
+}
+document.getElementById("visitorName").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") openSurprise();
+});
 </script>
 
-<div class="floating-hearts" aria-hidden="true">
-  <span>♥</span>
-  <span>♥</span>
-  <span>♥</span>
-  <span>♥</span>
-  <span>♥</span>
-</div>
-  
-<div class="sparkles" aria-hidden="true">
-  <span>✦</span>
-  <span>✧</span>
-  <span>✦</span>
-  <span>✧</span>
-  <span>✦</span>
-</div>
-  
-  
+<div class="floating-hearts" aria-hidden="true"><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span></div>
+<div class="sparkles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>✧</span><span>✦</span></div>
 </body>
-    </html>
-  
+</html>
